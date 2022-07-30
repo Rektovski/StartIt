@@ -34,6 +34,9 @@ export default function CppPage() {
                             <Accordion.Body>
                                 <ol>
                                     <li>
+                                        CPA - C++ სერტიფიცირებული ასოცირებული პროგრამისიტი
+                                    </li>
+                                    <li>
                                         საინჟინრო ფიზიკის მაგისტრი
                                     </li>
                                     <li>
