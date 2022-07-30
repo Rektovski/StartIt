@@ -1,0 +1,19 @@
+.hovering {
+    height: 10rem;
+    width: 10rem;
+}
+
+.hovering:hover {
+    box-shadow: -5px 5px rgba(112,243,68,0.19);
+    animation-name: spinner-border;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
+.imageStyle {
+    height: 7rem;
+    width: 7rem;
+}
