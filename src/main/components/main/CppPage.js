@@ -1,8 +1,10 @@
 import {Accordion, Button, Card, Container} from "react-bootstrap";
-import "../../style/cppStyle.css";
-import cppProfileImage from "../../image/cppMentorImage.png";
+import "../../design/cppPageStyle.css";
+import cppProfileImage from "../../assets/profPic.jpg";
 import ModalForCppSylabus from "../modal/ModalForCppSylabus";
 import {useState} from "react";
+import cppImage from "../../assets/ISO_C++_Logo.svg.png";
+import Motivation from "./Motivation";
 
 export default function CppPage() {
     const [show, setShow] = useState(false);
@@ -11,39 +13,42 @@ export default function CppPage() {
         <Container>
             <Card>
                 <Card.Header className={'text-center'}>
-                    <Card.Title>C++</Card.Title>
-                </Card.Header>
-                <Card.Body>
-                    <div className={'d-flex justify-content-center'}>
-                        <div className={'p-2 border profile-place'}>
-                            <div className={'p-2 d-flex justify-content-center'}>
-                                <img className={'profile-image'} src={cppProfileImage}
-                                     alt={`If you see this it means you can't see mentor's face`}/>
-                            </div>
-                            <div className={'text-center'}>
-                                <a
-                                    className={'link'}
-                                    href={"https://fb.com/OtexRektovski"} target={'_blank'} rel={"noreferrer"}>ოთარ
-                                    მურმანიშვილი</a>
-                            </div>
+                    <Card.Title className={'cppPageCardTitle'}>
+                        <div className={'cppImageText'}>{`cout<<"Mother of Languages";`}</div>
+                        <div className={'cppImageSpace'}>
+                            <img className={'cppImage'} src={cppImage} alt={'cpp logo'}/>
                         </div>
+                    </Card.Title>
+                </Card.Header>
+
+                <Motivation/>
+
+
+                <Card.Body className={'cppPageCardBody'}>
+                    <div className={'profileImageSpace'}>
+                        <img className={'profile-image'}
+                             src={cppProfileImage}
+                             alt={`If you see this it means you can't see mentor's face`}
+                        />
                     </div>
-                    <Accordion className={'my-5 '}>
+
+                    <Accordion className={'my-5'} defaultActiveKey={'0'}>
                         <Accordion.Item eventKey={'0'} className={'accordionStyle'}>
                             <Accordion.Header>მენტორის შესახებ</Accordion.Header>
                             <Accordion.Body>
                                 <ol>
                                     <li>
-                                        CPA - C++ სერტიფიცირებული ასოცირებული პროგრამისიტი
+                                        GITA C++ - სერტიფიცირებული - <a
+                                        href={'https://drive.google.com/drive/u/0/folders/15eWQlv1gBHVjYpqhNkZKtQAi_LB8tpiY'}>Certificate</a> :
+                                        C++ Certified Associate Programmer: <a
+                                        href={'https://www.ict.gov.ge/trainings/c-plus-plus-certified-associate-programmer/'}>კურსი</a> -
+                                        2022
                                     </li>
                                     <li>
-                                        საინჟინრო ფიზიკის მაგისტრი
+                                        საინჟინრო ფიზიკის მაგისტრი - 2017/2023
                                     </li>
                                     <li>
-                                        1 წლიანი გამოცდილების მქონე მენტორი C++-ში
-                                    </li>
-                                    <li>
-                                        ჯუნიორ ფრონტ-ენდ დეველოპერი
+                                        კერძო C++ მენტორი - 2022 წლიდან : მომზადებულ სტუდენტებთა რაოდენობა - <span style={{fontWeight: "bold", fontStyle: "italic"}}>4</span>
                                     </li>
                                     <li>
                                         მრავალი მიმართულების მრავალი საერთაშორისო სერტიფიკატების მფლობელი - <a
@@ -82,52 +87,47 @@ export default function CppPage() {
                                 </ul>
                                 <ul>
                                     სწავლის პერიოდში:
-                                    <li>ჩართვები დისტანციურად Zoom-ის პლატფორმაზე</li>
+                                    <li>ჩართვები დისტანციურად Google Meet-ის პლატფორმაზე</li>
+                                    <li>საწყისი და საჭირო თეორიების გავლა</li>
                                     <li>საოლიმპიადო ამოცანებზე დაყრდნობით თეორიების პრაქტიკული დამუშავება</li>
                                     <li>ამოცანებზე წვდომა გვექნება უკრაინულ საიტ <a href={'https://eolymp.com'}
                                                                                     target={'_blank'}
                                                                                     rel={"noreferrer"}>eolymp.com</a>-ზე
                                     </li>
-                                    <ul>
-                                        <li>თვეში 8, კვირაში 2 შეხვედრა სტუდენტის არჩევით</li>
-                                        <li>
-                                            ნელი კურსი: 4 თვე, თვეში 200 ლარი.
-                                        </li>
-                                        <li>
-                                            <div>სწრაფი კურსი: 2 თვე, თვეში 400 ლარი</div>
-                                            <div><b>შენიშვნა</b>: სწრაფი კურსის არჩევის შემთხვევაში დამწყებს უნდა
-                                                ჰქონდეს დამაკმაყოფილებელი მათემატიკური უნარები. ამის შესამოწმებლად
-                                                ჩატარდება მისაღები გამოცდა დისტანციურად. სტუდენტი, რომელიც 5-დან
-                                                4 ამოცანას ან მეტს ამოხსნის მიეცემა სრწაფი კურსის გავლის საშუალება 300
-                                                ლარად. სტუდენტი, რომელიც 3 ამოცანას ამოხსნის მიეცემა სრული კურსის
-                                                გავლის საშუალება დადგენილ ფასში, ხოლო ვინც უფრო ნაკლებ ამოცანას ამოხსნის
-                                                მათ შეეზღუდებათ სწრაფი კურსის გავლის სერვისით მომსახურება.
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <li>
+                                        1 საათი - 40 ლარი : 8 საათი 400 ლარი
+                                    </li>
+                                    <li>
+                                        საათის მიღება/გადანაწილება დამოკიდებულია ურთიერთშეთანხმებაზე
+                                    </li>
                                 </ul>
                                 <ul>
-                                    კურსის დამთავრებისას გეცოდინებათ:
+                                    ჩემთან სწალვის შემდეგ გეცოდინებათ:
                                     <li>C++-ის საფუძვლები</li>
-                                    <li>ობიექტზე ორიენტირებული დაპროგრამება</li>
+                                    <li>წარმატებით გაივლით თქვენი უნივერსიტეტის საგნებს</li>
                                 </ul>
                                 <ul>
-                                    გაგიადვილდებათ:
+                                    სამომავლოდ გაგიადვილდებათ:
                                     <li>სხვა ენების შესწავლა</li>
                                     <li>სამსახურის პოვნა</li>
                                 </ul>
                                 <ul>
-                                    წარმატებული კურსდამთავრებული მიიღებს სერტიფიკატს StartIt -ისგან.
+                                    ნიჭიერ ხალხს სამომავლოდ შევთავაზებ კოლეგობას. &#128526;
                                 </ul>
                                 <div className={'d-flex justify-content-end'}>
-                                    <Button variant={'outline-primary'} onClick={()=>{setShow(true)}}>კურიკულუმის ნახვა</Button>
+                                    <Button variant={'outline-primary'} onClick={() => {
+                                        setShow(true)
+                                    }}>კურიკულუმის ნახვა</Button>
                                 </div>
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
+
                     <ModalForCppSylabus
                         show={show}
-                        onHide={()=>{setShow(false)}}
+                        onHide={() => {
+                            setShow(false)
+                        }}
                     />
                 </Card.Body>
             </Card>

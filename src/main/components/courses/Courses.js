@@ -1,6 +1,6 @@
 import {Card, Container} from "react-bootstrap";
-import "../../style/coursesCardStyle.css";
-import cppImage from "../../image/ISO_C++_Logo.svg.png";
+import "../../design/coursesCardStyle.css";
+import cppImage from "../../assets/ISO_C++_Logo.svg.png";
 
 export default function Courses() {
     return (

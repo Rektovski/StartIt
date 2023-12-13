@@ -1,6 +1,6 @@
 import {Card} from "react-bootstrap";
-import "../../style/errorPageStyle.css";
-import errorPageImage from "../../image/errorPageImage.jpg";
+import "../../design/errorPageStyle.css";
+import errorPageImage from "../../assets/errorPageImage.jpg";
 
 export default function ErrorPage() {
     return (

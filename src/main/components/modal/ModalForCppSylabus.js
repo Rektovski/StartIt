@@ -1,6 +1,10 @@
 import {Button, Modal} from "react-bootstrap";
+import {useState} from "react";
+import ContactModal from "./ContactModal";
 
 export default function ModalForCppSylabus(props) {
+    const [show, setShow] = useState(false);
+
     return (
         <Modal {...props} size={'xl'}>
             <Modal.Header closeButton>
@@ -10,31 +14,44 @@ export default function ModalForCppSylabus(props) {
             </Modal.Header>
             <Modal.Body>
                 <ul>
-                    <li>ცვლადი, ცვლადთა ტიპები: char, short, int, long long, bool, double, float; ნიშნიანი და უნიშნო ცვლადები</li>
-                    <li>პროცესორის ენა: ორობითი</li>
-                    <li>User input - გამშვები კოდების შესწავლა. არაფორმატიანი/ნელი შეტანა გამოტანის მეთოდები</li>
-                    <li>User input - გამშვები კოდების შესწავლა. ფორმატიანი/სწრაფი შეტანა გამოტანის მეთოდები</li>
-                    <li>სიმბოლო</li>
-                    <li>სიტყვები</li>
-                    <li>ფუნქცია</li>
-                    <li>მათემატიკური მოქმედებები და ლოგიკური ოპერაციები</li>
-                    <li>პირობითი ოპერატორები</li>
-                    <li>ციკლები</li>
-                    <li>რეკურსია</li>
-                    <li>მასივი</li>
-                    <li>სიმრავლე და მულტისიმრავლე</li>
-                    <li>ასოცირებული მასივი</li>
-                    <li>სტეკი, რიგი, შებრუნებული რიგი</li>
-                    <li>მარტივი რიცხვები</li>
-                    <li>უსგ/უსჯ</li>
-                    <li>ბიტური ოპერაცები</li>
-                    <li>მატრიცა</li>
-                    <li>ბინარული ახარისხება</li>
+                    <li>Processor 0110010...</li>
+                    <li>Variable/Typology</li>
+                    <li>User Control I/O</li>
+                    <li>Char</li>
+                    <li>String</li>
+                    <li>Function</li>
+                    <li>Math && Logical Operators</li>
+                    <li>ElseIF Operators</li>
+                    <li>Cycle</li>
+                    <li>Recursion</li>
+                    <li>Array</li>
+                    <li>Set Multiset</li>
+                    <li>Map</li>
+                    <li>Stack, Queue, Deque</li>
+                    <li>Prime Numbers</li>
+                    <li>LCM/GDM</li>
+                    <li>Bitwise Operators</li>
+                    <li>Double Dimensional Arrays/Matrix</li>
+                    <li>Binary Powering</li>
+                    <li>და ა.შ რაც დაგვჭირდება</li>
                 </ul>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant={'outline-success'}>კურსის ყიდვა</Button>
+                <Button
+                    variant={'primary'}
+                    onClick={() => {
+                        setShow(!show);
+                        console.log("gavxseni")
+                    }}
+                >აბა გინდა ჩემი მოწაფეობა, მოწაფევ!?</Button>
             </Modal.Footer>
+
+            <ContactModal
+                show={show}
+                onHide={() => {
+                    setShow(false)
+                }}
+            />
         </Modal>
     )
 }
