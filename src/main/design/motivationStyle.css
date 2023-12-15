@@ -38,6 +38,7 @@
 }
 
 .motivationContainer:hover {
+    cursor: pointer;
     transition: all .5s ease-in-out;
     width: 600px;
     border-radius: 25px;

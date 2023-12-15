@@ -1,5 +1,5 @@
-import cppImage from "../../../assets/ISO_C++_Logo.svg.png";
-import "../../../design/headerStyle.css"
+import cppImage from "../../assets/ISO_C++_Logo.svg.png";
+import "../../design/headerStyle.css"
 import {useEffect} from "react";
 
 export default function Header() {

@@ -17,6 +17,40 @@
     transition: all .3s ease-in-out;
     padding: 5px 5px;
     border-radius: 22px;
+    overflow: hidden;
+    max-height: 70px;
+}
+
+@keyframes spAnimationStart {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-480px);
+        opacity: 0;
+        width: 0;
+    }
+}
+
+.soundPlayerAnimationStart {
+    animation: spAnimationStart 1s forwards;
+}
+
+@keyframes spAnimationStop {
+    0% {
+        transform: translateX(-480px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+.soundPlayerAnimationStop {
+    animation: spAnimationStop 1s forwards;
 }
 
 .soundSpace {
@@ -51,15 +85,74 @@
     scale: 1.5;
 }
 
+.musicPlayerIconsMain {
+    z-index: 1;
+    background: red;
+}
+
 .musicPlayerIcons {
     transition: all .3s ease-in-out;
     border-radius: 100%;
     padding: 20px;
 }
 
-.musicPlayerIcons:hover {
+.musicPlayerIcons:hover, .musicPlayerIconsMain {
     transition: .3s;
     cursor: pointer;
     background: #000000;
     color: #ff0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* YourComponent.css */
+
+.containerSP {
+    background: red;
+    position: relative;
+    width: 400px; /* Set the container width as needed */
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: left 0.5s ease;
+}
+
+.contentSP {
+    position: absolute;
+    top: 50%;
+    /*left: 200px;*/
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.containerSP.content-visible .circle {
+    left: 200px;
+    background: red;
+}
+
+.containerSP.content-visible .contentSP {
+    background: red;
+    opacity: 1;
 }
