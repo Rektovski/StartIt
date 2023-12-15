@@ -106,6 +106,7 @@ export default function ContactModal(props) {
                 <div className={'contactModalFbContact'}>
                     ან მომწერე ფეისბუქზე -
                     <a href={'https://www.facebook.com/OtexRektovski'}
+                       rel={'noreferrer'}
                     target={'_blank'}>
                         <FbIcon size={40} color={'lightblue'}/>
                     </a>

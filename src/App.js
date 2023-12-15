@@ -1,10 +1,10 @@
-import CppPage from "./main/components/main/CppPage";
+import Main from "./main/components/main/MAIN/Main";
 import './App.css';
 
 function App() {
   return (
       <div >
-          <CppPage/>
+          <Main/>
       </div>
   );
 }

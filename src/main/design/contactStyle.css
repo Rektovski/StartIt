@@ -12,12 +12,18 @@
     border-radius: 10px;
     border: unset;
     transition: .2s;
-    outline: none;
+    outline: 0 solid white;
 }
 
 .formInput:focus, .formLabelText:focus, .formLabelText:focus {
+    background: whitesmoke;
     transition: all .2s ease-in-out;
-    outline: 1px solid #00c4ff;
+    box-shadow: 0 0 25px 1px darkcyan;
+    scale: 2;
+}
+
+.formInput:valid {
+    background: rgba(217, 255, 250, 0.75);
 }
 
 .contactModalFbContact {
@@ -30,5 +36,15 @@
 @media (width < 1000px) {
     .formPart {
         width: 300px;
+    }
+
+    .formInput:focus, .formLabelText:focus, .formLabelText:focus {
+        scale: 1.5;
+    }
+}
+
+@media (width < 600px) {
+    .formInput:focus, .formLabelText:focus, .formLabelText:focus {
+        scale: 1.2;
     }
 }

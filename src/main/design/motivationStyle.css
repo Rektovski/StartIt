@@ -1,43 +1,64 @@
 .motivation {
-    background-image: url("../assets/giphy.gif");
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center;
-    scale: 0.8;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.motivationImageSpace {
+    width: 400px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.motivationImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.motivationContainerSpace {
+    width: 600px;
 }
 
 .motivationContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
     font-weight: bold;
+    font-size: 18px;
+    width: 400px;
     padding: 20px;
     transition: .5s;
     cursor: default;
-    color: #4d0f0f;
-    background-color: rgba(248, 244, 244, 0.91);
+    color: #ffffff;
+    background-color: rgb(64, 90, 162);
     margin: 10px auto;
+    border-radius: 3px;
 }
 
 .motivationContainer:hover {
     transition: all .5s ease-in-out;
+    width: 600px;
     border-radius: 25px;
     box-shadow: 0 0;
-    background-color: rgba(39, 204, 56, 0.83);
-    font-size: 25px;
+    background-color: rgba(100, 169, 245, 0.83);
     color: white;
     text-shadow: rgba(187, 171, 171, 0.44) -20px -10px;
 }
 
 @media (width < 1000px) {
     .motivation {
+        display: block;
         background-size: inherit;
-        background-color: #041333;
+    }
+
+    .motivationImageSpace {
+        width: 100%;
+    }
+
+    .motivationContainerSpace {
+        width: 100%;
     }
 
     .motivationContainer {
@@ -47,6 +68,6 @@
     }
 
     .motivationContainer:hover {
-        font-size: 16px;
+        width: 90%;
     }
 }
