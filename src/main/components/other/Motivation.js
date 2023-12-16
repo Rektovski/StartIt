@@ -35,7 +35,6 @@ export default function Motivation() {
                         <SkillIcon size={80} color={'yellow'} className={'me-3'} />
                         აკრიფე ფუნდამენტური უნარები
                     </div>
-
                 </div>
 
                 <ContactModal

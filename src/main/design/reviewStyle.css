@@ -1,5 +1,4 @@
 .reviewSpace {
-    height: 900px;
     background: #46485d;
     margin-top: 50px;
     overflow: hidden;
@@ -25,14 +24,13 @@
 
 .reviewChar:hover {
     letter-spacing: 50px;
-    top: 10px;
+    /*top: 10px;*/
+    opacity: 0;
 }
 
 .carouselImageSpace {
     width: 300px;
     height: 300px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 .carouselImage {
@@ -41,22 +39,61 @@
     border-radius: 20px;
 }
 
-.carouselStudentName {
-    text-align: center;
+.carouselHeader {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.carouselStudentUni {
     font-size: 30px;
-    padding: 100px;
+    padding: 30px;
+    cursor: default;
+}
+
+.carouselStudentName {
+    /*text-align: center;*/
+    font-size: 20px;
+    padding: 30px;
     cursor: default;
 }
 
 .carouselStudentReview {
-    text-align: center;
+    text-align: justify;
     font-size: 25px;
+    padding: 80px;
     cursor: default;
 }
 
 .reviewStartButton {
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
+}
+
+@media (width < 800px) {
+    .carouselHeader {
+        display: unset;
+        padding: 20px;
+    }
+
+    .carouselImageSpace {
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    .carouselStudentUni {
+        text-align: center;
+    }
+
+    .carouselStudentName {
+        text-align: center;
+    }
+
+    .carouselStudentReview {
+        font-size: 12px;
+        padding: 20px;
+    }
 }

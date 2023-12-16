@@ -1,6 +1,7 @@
 import {Button, Modal} from "react-bootstrap";
 import {useState} from "react";
 import ContactModal from "./ContactModal";
+import "../../design/modalForCppSylabus.css";
 
 export default function ModalForCppSylabus(props) {
     const [show, setShow] = useState(false);

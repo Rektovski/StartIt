@@ -3,6 +3,11 @@ import ModalForCppSylabus from "../modal/ModalForCppSylabus";
 import {Accordion, Button} from "react-bootstrap";
 import {useState} from "react";
 import "../../design/whatIGiveYourStyle.css";
+import {AiFillSafetyCertificate as VerifyIcon} from "react-icons/ai";
+import {GrCertificate as DiplomaIcon, GrArticle as ArticleIcon} from "react-icons/gr";
+import {TbBooks as TeacherIcon} from "react-icons/tb";
+import { GiChampions as RankingIcon} from "react-icons/gi";
+import { MdPictureAsPdf as PdfIcon} from "react-icons/md";
 
 export default function WhatIGiveYou() {
     const [show, setShow] = useState(false);
@@ -18,37 +23,38 @@ export default function WhatIGiveYou() {
                             <ol className={'accordionPart1Text'}>
                                 <li>
                                     GITA C++ - სერტიფიცირებული - <a
-                                    href={'https://drive.google.com/drive/u/0/folders/15eWQlv1gBHVjYpqhNkZKtQAi_LB8tpiY'}>Certificate</a> :
+                                    href={'https://drive.google.com/drive/u/0/folders/15eWQlv1gBHVjYpqhNkZKtQAi_LB8tpiY'}>Certificate
+                                </a> :
                                     C++ Certified Associate Programmer: <a
                                     href={'https://www.ict.gov.ge/trainings/c-plus-plus-certified-associate-programmer/'}>კურსი</a> -
-                                    2022
+                                    2022 <VerifyIcon size={30}/>
                                 </li>
                                 <li>
-                                    საინჟინრო ფიზიკის მაგისტრი - 2017/2023
+                                    საინჟინრო ფიზიკის მაგისტრი - 2017/2023 <DiplomaIcon size={30}/>
                                 </li>
                                 <li>
-                                    კერძო C++ მენტორი - 2022 წლიდან : მომზადებულ სტუდენტებთა რაოდენობა - <span
-                                    style={{fontWeight: "bold", fontStyle: "italic"}}>4</span>
+                                    კერძო C++ მენტორი - 2022 წლიდან <TeacherIcon size={30}/> {/*: მომზადებულ სტუდენტებთა რაოდენობა -<span
+                                    style={{fontWeight: "bold", fontStyle: "italic"}}>4</span>*/}
                                 </li>
                                 <li>
                                     მრავალი მიმართულების მრავალი საერთაშორისო სერტიფიკატების მფლობელი - <a
                                     href={'https://www.facebook.com/gtu.ge/posts/3540623606015672'}
                                     target={'_blank'} rel={'noreferrer'}>
                                     სტატია
-                                </a>
+                                </a> <ArticleIcon size={30}/>
                                 </li>
                                 <li>
-                                    პროგრამირების საერთაშორისო საოლიმპიადო ანგარიში Top ~200 - <a
+                                    პროგრამირების საერთაშორისო ანგარიში Top ~200 - <a
                                     href={"https://www.eolymp.com/en/users/OtarMurmanishvili"} target={'_blank'}
                                     rel={'noreferrer'}>
                                     User
-                                </a></li>
+                                </a> <RankingIcon size={30}/></li>
                                 <li>
                                     პერსონალურ მონაცემთა დაცვის კონკურსის გამარჯვებული და წიგნის თანაავტორი - <a
                                     href={"https://www.seu.edu.ge/uploads/files/News/kompiuteruli%20teqnologiebi%20(1).pdf"}
                                     target={'_blank'} rel={"noreferrer"}>
                                     ელექტრონული ვერსია
-                                </a>
+                                </a> <PdfIcon size={30}/>
                                 </li>
                             </ol>
                             <div className={'profileImageSpace'}>

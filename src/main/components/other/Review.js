@@ -30,17 +30,22 @@ export default function Review() {
                     {
                         carouselArray.map((item, id) => (
                             <Carousel.Item key={id}>
-                                <div className={'carouselStudentName'}>{item.name}</div>
-                                <div className={'carouselStudentReview'}>{item.text}</div>
-                                <div className={'carouselImageSpace'}>
-                                    <img className={'carouselImage'} src={item.img} alt={'img'}/>
+                                <div className={'carouselHeader'}>
+                                    <div className={'carouselImageSpace'}>
+                                        <img className={'carouselImage'} src={item.img} alt={'img'}/>
+                                    </div>
+                                    <div>
+                                        <div className={'carouselStudentUni'}>{`${item.uni}`}</div>
+                                        <div className={'carouselStudentName'}>{`${item.name}`}</div>
+                                    </div>
                                 </div>
+                                <div className={'carouselStudentReview'}>&nbsp;&nbsp;&nbsp;{item.text}</div>
                             </Carousel.Item>
                         ))
                     }
                 </Carousel>
                 <div className={'reviewStartButton'}>
-                    <Button size={'lg'} variant={'outline-light'} onClick={() => {
+                    <Button style={{fontSize: 30}} size={'lg'} variant={'outline-light'} onClick={() => {
                         setShow(!show)
                     }}>
                         მზად ხარ?
