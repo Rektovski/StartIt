@@ -42,7 +42,6 @@ export default function ModalForCppSylabus(props) {
                     variant={'primary'}
                     onClick={() => {
                         setShow(!show);
-                        console.log("gavxseni")
                     }}
                 >აბა გინდა ჩემი მოწაფეობა, მოწაფევ!?</Button>
             </Modal.Footer>

@@ -65,12 +65,12 @@ ol li {
     }
 }
 
-@media (width < 600px) {
+@media (width < 1000px) {
     .accordionPart1 {
         display: block;
 
         .accordionPart1Text {
-            width: 250px;
+            width: 100%;
         }
     }
 }

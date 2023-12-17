@@ -2,6 +2,11 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "email": "murmanishvili94@gmail.com",
+    "name": "Otar Murmanishvili",
+    "url": "otarmurmanishvili.netlify.app"
+  },
   "dependencies": {
     "@chakra-ui/react": "^2.4.2",
     "@emotion/react": "^11.10.5",

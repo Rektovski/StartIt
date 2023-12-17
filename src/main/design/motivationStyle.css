@@ -54,10 +54,6 @@
         background-size: inherit;
     }
 
-    .motivationImageSpace {
-        width: 100%;
-    }
-
     .motivationContainerSpace {
         width: 100%;
     }
@@ -70,5 +66,12 @@
 
     .motivationContainer:hover {
         width: 90%;
+    }
+}
+
+@media (width < 600px) {
+    .motivationImageSpace {
+        width: 300px;
+        height: 250px;
     }
 }

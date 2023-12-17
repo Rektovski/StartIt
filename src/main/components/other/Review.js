@@ -40,8 +40,8 @@ export default function Review() {
                                     </div>
                                 </div>
                                 <div className={'carouselStudentReview'}>&nbsp;&nbsp;&nbsp;{item.text}</div>
-                            </Carousel.Item>
-                        ))
+                                </Carousel.Item>
+                            ))
                     }
                 </Carousel>
                 <div className={'reviewStartButton'}>

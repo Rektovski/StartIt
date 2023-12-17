@@ -8,6 +8,7 @@ import {GrCertificate as DiplomaIcon, GrArticle as ArticleIcon} from "react-icon
 import {TbBooks as TeacherIcon} from "react-icons/tb";
 import { GiChampions as RankingIcon} from "react-icons/gi";
 import { MdPictureAsPdf as PdfIcon} from "react-icons/md";
+import georgianFlag from '../../assets/georgianFlag.png';
 
 export default function WhatIGiveYou() {
     const [show, setShow] = useState(false);
@@ -21,20 +22,23 @@ export default function WhatIGiveYou() {
                         <Accordion.Header>მენტორის შესახებ</Accordion.Header>
                         <Accordion.Body className={'accordionPart1'}>
                             <ol className={'accordionPart1Text'}>
+                                <h1 className={'text-center p-3'}>ოთარ მურმანიშვილი</h1>
                                 <li>
                                     GITA C++ - სერტიფიცირებული - <a
-                                    href={'https://drive.google.com/drive/u/0/folders/15eWQlv1gBHVjYpqhNkZKtQAi_LB8tpiY'}>Certificate
+                                    href={'https://drive.google.com/drive/u/0/folders/15eWQlv1gBHVjYpqhNkZKtQAi_LB8tpiY'}
+                                    target={'_blank'} rel={'noreferrer'}>Certificate
                                 </a> :
                                     C++ Certified Associate Programmer: <a
-                                    href={'https://www.ict.gov.ge/trainings/c-plus-plus-certified-associate-programmer/'}>კურსი</a> -
+                                    href={'https://www.ict.gov.ge/trainings/c-plus-plus-certified-associate-programmer/'}
+                                    target={'_blank'} rel={'noreferrer'}>კურსი</a> -
                                     2022 <VerifyIcon size={30}/>
                                 </li>
                                 <li>
                                     საინჟინრო ფიზიკის მაგისტრი - 2017/2023 <DiplomaIcon size={30}/>
                                 </li>
                                 <li>
-                                    კერძო C++ მენტორი - 2022 წლიდან <TeacherIcon size={30}/> {/*: მომზადებულ სტუდენტებთა რაოდენობა -<span
-                                    style={{fontWeight: "bold", fontStyle: "italic"}}>4</span>*/}
+                                    კერძო C++ მენტორი - 2022 წლიდან <TeacherIcon size={30}/> : მომზადებულ სტუდენტებთა რაოდენობა -<span
+                                    style={{fontWeight: "bold", fontStyle: "italic"}}> 4+</span>
                                 </li>
                                 <li>
                                     მრავალი მიმართულების მრავალი საერთაშორისო სერტიფიკატების მფლობელი - <a
@@ -48,7 +52,11 @@ export default function WhatIGiveYou() {
                                     href={"https://www.eolymp.com/en/users/OtarMurmanishvili"} target={'_blank'}
                                     rel={'noreferrer'}>
                                     User
-                                </a> <RankingIcon size={30}/></li>
+                                </a>
+                                    <div>
+                                        <img src={georgianFlag} width={30} height={25} alt={'georgianFlag'}/> -ებს შორის #1! <RankingIcon size={30}/>
+                                    </div>
+                                </li>
                                 <li>
                                     პერსონალურ მონაცემთა დაცვის კონკურსის გამარჯვებული და წიგნის თანაავტორი - <a
                                     href={"https://www.seu.edu.ge/uploads/files/News/kompiuteruli%20teqnologiebi%20(1).pdf"}
@@ -61,6 +69,7 @@ export default function WhatIGiveYou() {
                                 <img className={'profileImage'}
                                      src={cppProfileImage}
                                      alt={`If you see this it means you can't see mentor's face`}
+
                                 />
                             </div>
                         </Accordion.Body>
@@ -87,7 +96,7 @@ export default function WhatIGiveYou() {
                                                                                 rel={"noreferrer"}>eolymp.com</a>-ზე
                                 </li>
                                 <li>
-                                    1 საათი - 40 ლარი : 8 საათი 400 ლარი
+                                    8 საათი - 400 ლარი
                                 </li>
                                 <li>
                                     საათის მიღება/გადანაწილება დამოკიდებულია ურთიერთშეთანხმებაზე
