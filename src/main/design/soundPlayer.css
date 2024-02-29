@@ -21,6 +21,10 @@
     max-height: 70px;
 }
 
+.soundPlayerAnimation {
+    display: flex;
+}
+
 @keyframes spAnimationStart {
     0% {
         transform: translateX(0);
@@ -85,6 +89,15 @@
     scale: 1.5;
 }
 
+.eyeRoller:active {
+    transition: .3s;
+    cursor: pointer;
+    color: #ff0000;
+    padding: 30px;
+    border-radius: 100%;
+    scale: 1.5;
+}
+
 .musicPlayerIconsMain {
     z-index: 1;
     background: red;
@@ -92,7 +105,7 @@
 
 .musicPlayerIcons {
     transition: all .3s ease-in-out;
-    border-radius: 100%;
+    border-radius: 25%;
     padding: 20px;
 }
 
@@ -103,42 +116,23 @@
     color: #ff0000;
 }
 
-/* YourComponent.css */
+@media (width < 800px) {
 
-.containerSP {
-    background: red;
-    position: relative;
-    width: 400px; /* Set the container width as needed */
-}
+    .eyeRoller:hover {
+        transition: .3s;
+        cursor: pointer;
+        color: #ff0000;
+        padding: 0;
+        border-radius: 100%;
+        scale: 1;
+    }
 
-.circle {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    border-radius: 50%;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    transition: left 0.5s ease;
-}
-
-.contentSP {
-    position: absolute;
-    top: 50%;
-    /*left: 200px;*/
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.containerSP.content-visible .circle {
-    left: 200px;
-    background: red;
-}
-
-.containerSP.content-visible .contentSP {
-    background: red;
-    opacity: 1;
+    .eyeRoller:active {
+        transition: .3s;
+        cursor: pointer;
+        color: #ff0000;
+        padding: 30px;
+        border-radius: 100%;
+        scale: 1.5;
+    }
 }

@@ -2,14 +2,14 @@ import "../../design/soundPlayer.css";
 import Sound from 'react-sound';
 import song1 from "../../music/song1.mp3";
 import song2 from "../../music/song2.mp3";
-import leftEye from "../../assets/soundPlayerImage/2.png";
-import rightEye from "../../assets/soundPlayerImage/1.png";
+import leftEye from "../../assets/soundPlayerImage/1.png";
+import rightEye from "../../assets/soundPlayerImage/2.png";
 import {useState} from "react";
 import {FiPlayCircle as PlayIcon} from "react-icons/fi";
 import {TbPlayerStop as StopIcon} from "react-icons/tb";
 import {BsMusicNoteBeamed as MusicIcon} from "react-icons/bs";
 
-const SoundPlayer = () => {
+export default function SoundPlayer() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [hideMusic, setHideMusic] = useState(true);
     const [currentMusic, setCurrentMusic] = useState(0);
@@ -34,7 +34,8 @@ const SoundPlayer = () => {
     return (
         <div className={'soundSpace'}>
             <div className={'musicPlayer'}>
-                <div className={`soundPlayerAnimation ${hideMusic ? 'soundPlayerAnimationStart' : 'soundPlayerAnimationStop'}`}>
+                <div
+                    className={`soundPlayerAnimation ${hideMusic ? 'soundPlayerAnimationStart' : 'soundPlayerAnimationStop'}`}>
                     <img src={leftEye} alt={'eye'} className={'eyeRoller'} onClick={choosePreviousSong}/>
                     {
                         !isPlaying ?
@@ -60,5 +61,3 @@ const SoundPlayer = () => {
         </div>
     )
 }
-
-export default SoundPlayer;
